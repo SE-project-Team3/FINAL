@@ -1,0 +1,69 @@
+.reservation-page {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 3rem auto;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: black;
+}
+
+.reservation-page h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.reservation-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.reservation-card {
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: box-shadow 0.2s ease;
+}
+
+.reservation-card:hover {
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.reservation-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.reservation-info p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.cancel-btn {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.cancel-btn:hover {
+  background-color: #222;
+}
+
+.reservation-actions {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}

@@ -1,0 +1,196 @@
+/* 캘린더 설정 */
+.react-calendar {
+  width: 100%;
+  max-width: 540px;
+  background: white;
+  border: none;
+  padding: 0;
+  --react-calendar-week-start: 0; 
+}
+
+.react-calendar__navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.react-calendar__navigation button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: black;
+}
+
+.react-calendar__month-view__weekdays,
+.react-calendar__month-view__weekdays__weekday {
+  text-align: center;
+  font-weight: bold;
+  color: grey;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.react-calendar__tile {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1px;
+  border-radius: 0;
+  color: black;
+  background: transparent;
+  transition: background-color 0.2s ease-in-out;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.react-calendar__tile--now {
+  background: none;
+  color: red;
+  font-weight: bold;
+}
+
+.react-calendar__tile--active {
+  background: blue;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+}
+
+.react-calendar__tile:hover:not(.react-calendar__tile--now) {
+  background-color: #f1f1f1;
+}
+
+/* 메인 페이지 */
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: black;
+}
+
+.home-page {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.left-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.time-select button {
+  margin-right: 10px;
+  padding: 10px 16px;
+  font-size: 1rem;
+  border: 1px solid lightgray;
+  background: white;
+  color: black;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.time-select .active {
+  background-color: black;
+  color: white;
+}
+
+.time-select button:disabled {
+  background-color: #f1f1f1;
+  color: gray;
+  cursor: not-allowed;
+}
+
+.people-select {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.people-select button {
+  padding: 8px 14px;
+  font-size: 1.1rem;
+  border: 1px solid lightgray;
+  background: white;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: bold;
+  color: black;
+}
+
+.people-select button.disabled {
+  background-color: #f1f1f1;
+  color: gray;
+  cursor: not-allowed;
+}
+
+.people-select span {
+  min-width: 36px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: black;
+}
+
+.check-availability {
+  padding: 12px;
+  width: 70%;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 30px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.check-availability:hover {
+  background-color: #222;
+}
+
+/*info*/
+.info-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 0;
+  box-sizing: border-box;
+}
+
+.info-image {
+  width: 80vw;
+  height: 300px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.info-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 80%;
+}
+
+.restaurant-details {
+  width: 70vw;
+  padding: 2rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
