@@ -38,7 +38,7 @@ function MyReservations() {
     const isPast = resDate.getTime() < today.getTime();
 
     if (isSameDay || isPast) {
-      alert('24시간 이내에는 취소할 수 없습니다.');
+      alert('예약일 하루 전까지만 취소할 수 있습니다.');
       return;
     }
 
