@@ -11,8 +11,8 @@ class User(db.Model):
 
 class Table(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    location = db.Column(db.String(20), nullable=False)  # 예: window, inside, room
-    capacity = db.Column(db.Integer, nullable=False)     # 2, 4, 6, 8
+    location = db.Column(db.String(20), nullable=False)  
+    capacity = db.Column(db.Integer, nullable=False)   
 
 class Reservation(db.Model):
     id = db.Column(db.Integer, primary_key=True)

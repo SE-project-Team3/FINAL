@@ -95,11 +95,11 @@ from datetime import datetime
 @app.route('/api/tables', methods=['GET'])
 def get_available_tables():
     date_str = request.args.get('date')
-    time_slot = request.args.get('time')  # lunch or dinner
+    time_slot = request.args.get('time') 
 
     if not date_str or time_slot not in ['lunch', 'dinner']:
         return Response(
-            response=json.dumps({"error": "날짜와 시간(lunch 또는 dinner)을 정확히 입력해주세요."}, ensure_ascii=False),
+            response=json.dumps({"error": "날짜와 시간을 정확히 입력해주세요."}, ensure_ascii=False),
             status=400,
             mimetype='application/json'
         )
@@ -271,7 +271,8 @@ def get_user_reservations():
             "time": r.time,
             "guests": r.guests,
             "table_id": r.table_id,
-            "location": r.table.location if r.table else "알 수 없음"
+            "location": r.table.location if r.table else "알 수 없음",
+            "capacity": r.table.capacity if r.table else 0 
         })
 
     return jsonify({"reservations": result})

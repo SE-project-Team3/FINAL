@@ -20,7 +20,7 @@ function MyReservations() {
           date: r.date,
           time: r.time || '미지정',
           people: r.guests,
-          table: { label: r.table_id, position: r.location }
+          table: { label: r.capacity, position: r.location }
         }));
         setReservations(formatted);
       })
